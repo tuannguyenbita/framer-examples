@@ -121,3 +121,12 @@ nav {
   cursor: pointer;
   flex-shrink: 0;
 }
+
+main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 128px;
+  flex-grow: 1;
+  user-select: none;
+}

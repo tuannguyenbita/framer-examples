@@ -63,7 +63,19 @@ const Home: React.FunctionComponent<IHomeProps> = (props) => {
             <AddIcon />
           </motion.button>
         </nav>
-        <main></main>
+        <main>
+          <AnimatePresence mode="popLayout">
+            <motion.div
+              key={selectedTab ? selectedTab.label : "empty"}
+              animate={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: 20 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.5 }}
+            >
+              {selectedTab && selectedTab.icon}
+            </motion.div>
+          </AnimatePresence>
+        </main>
       </section>
     </React.Fragment>
   );
